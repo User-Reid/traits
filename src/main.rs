@@ -8,6 +8,4 @@ fn main() {
     let integer_sum = add_two_numbers(1, 2);
     let float_sum = add_two_numbers(1.5, 2.4);
     println!("{integer_sum} and {float_sum}");
-
-    println!("Getting back into it :)")
 }
