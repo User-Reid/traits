@@ -4,4 +4,6 @@ trait Accommodation {
     fn book(&mut self, name: &str, nights: u32);
 }
 
+println!("Beggining tomorrow");
+
 fn main() {}
