@@ -58,15 +58,18 @@ impl Accommodation for AirBnB {
     }
 }
 
-fn book_for_one_night(entity: &mut impl Accommodation, guest: &str) {
+fn book_for_one_night<T: Accommodation>(entity: &mut T, guest: &str) {
     entity.book(guest, 1)
+}
+
+fn mix_and_match(first: &mut impl Accommodation, second: &mut impl Accommodation, guest: &str) {
+    first.book(guest, 1);
+    second.book(guest, 1);
 }
 
 fn main() {
     let mut hotel: Hotel = Hotel::new(String::from("The Luxe"));
-    book_for_one_night(&mut hotel, "Greg");
-    println!("{:#?}", hotel);
     let mut airbnb: AirBnB = AirBnB::new(String::from("Peter"), 45);
-    book_for_one_night(&mut airbnb, "Fucko");
-    println!("{:#?}", airbnb);
+    mix_and_match(&mut hotel, &mut airbnb, "Tacobell");
+    println!("{:#?}, {:#?}", hotel, airbnb);
 }
