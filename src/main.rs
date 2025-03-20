@@ -72,7 +72,4 @@ fn main() {
     let mut airbnb: AirBnB = AirBnB::new(String::from("Peter"), 45);
     mix_and_match(&mut hotel, &mut airbnb, "Tacobell");
     println!("{:#?}, {:#?}", hotel, airbnb);
-
-    println!("quick adjustment.");
-    println!("Wont lie this is one just to stay active.")
 }
