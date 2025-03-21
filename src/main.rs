@@ -68,8 +68,10 @@ fn mix_and_match(first: &mut impl Accommodation, second: &mut impl Accommodation
 }
 
 fn main() {
+    let test: String = String::from("Test");
     let mut hotel: Hotel = Hotel::new(String::from("The Luxe"));
     let mut airbnb: AirBnB = AirBnB::new(String::from("Peter"), 45);
     mix_and_match(&mut hotel, &mut airbnb, "Tacobell");
     println!("{:#?}, {:#?}", hotel, airbnb);
+    println!("{}", test)
 }
