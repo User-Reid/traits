@@ -74,4 +74,5 @@ fn main() {
     println!("{:#?}, {:#?}", hotel, airbnb);
     println!("{:#?}, {:#?}", hotel, airbnb);
 
+
 }
